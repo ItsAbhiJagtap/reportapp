@@ -165,85 +165,371 @@ body.dark::before {
     transition-delay: 0.75s;
   }
 
-  /* Neon button variants using CSS custom properties */
+  /* NEON BUTTON GREEN - Separate CSS */
   .neon-button-green {
-    --neon-color: #4ade80;
-    --neon-color-light: #059669;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
-    font-size: 12px;
+    color: #10b981;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    border: 2px solid #10b981;
+    background: transparent;
+    transition: 0.2s;
     border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    z-index: 1;
   }
 
+  .neon-button-green:hover {
+    color: #ffffff;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981, 0 0 40px #10b981, 0 0 80px #10b981;
+    transition-delay: 1s;
+  }
+
+  .neon-button-green:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .neon-button-green:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .neon-button-green span {
+    position: absolute;
+    display: block;
+    z-index: -1;
+  }
+
+  /* Green border animations */
+  .neon-button-green span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #10b981);
+  }
+  .neon-button-green:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  .neon-button-green span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #10b981);
+  }
+  .neon-button-green:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  .neon-button-green span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #10b981);
+  }
+  .neon-button-green:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  .neon-button-green span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #10b981);
+  }
+  .neon-button-green:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  /* NEON BUTTON RED - Separate CSS */
   .neon-button-red {
-    --neon-color: #f87171;
-    --neon-color-light: #dc2626;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
-    font-size: 12px;
+    color: #ef4444;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    border: 2px solid #ef4444;
+    background: transparent;
+    transition: 0.2s;
     border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    z-index: 1;
   }
 
+  .neon-button-red:hover {
+    color: #ffffff;
+    background: #ef4444;
+    box-shadow: 0 0 10px #ef4444, 0 0 40px #ef4444, 0 0 80px #ef4444;
+    transition-delay: 1s;
+  }
+
+  .neon-button-red:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  .neon-button-red:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  .neon-button-red span {
+    position: absolute;
+    display: block;
+    z-index: -1;
+  }
+
+  /* Red border animations */
+  .neon-button-red span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ef4444);
+  }
+  .neon-button-red:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+  }
+
+  .neon-button-red span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #ef4444);
+  }
+  .neon-button-red:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  .neon-button-red span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #ef4444);
+  }
+  .neon-button-red:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  .neon-button-red span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #ef4444);
+  }
+  .neon-button-red:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  /* NEON BUTTON ORANGE - Separate CSS */
   .neon-button-orange {
-    --neon-color: #fb923c;
-    --neon-color-light: #ea580c;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
-    font-size: 12px;
+    color: #f59e0b;
+    text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    overflow: hidden;
+    border: 2px solid #f59e0b;
+    background: transparent;
+    transition: 0.2s;
     border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    z-index: 1;
   }
 
-  /* Apply variant colors */
-  .neon-button-green,
-  .neon-button-red,
-  .neon-button-orange {
-    color: var(--neon-color);
-    border-color: var(--neon-color);
-  }
-
-  .neon-button-green:hover,
-  .neon-button-red:hover,
   .neon-button-orange:hover {
-    box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color), 0 0 40px var(--neon-color);
+    color: #ffffff;
+    background: #f59e0b;
+    box-shadow: 0 0 10px #f59e0b, 0 0 40px #f59e0b, 0 0 80px #f59e0b;
+    transition-delay: 1s;
   }
 
-  body:not(.dark) .neon-button-green,
-  body:not(.dark) .neon-button-red,
-  body:not(.dark) .neon-button-orange {
-    color: var(--neon-color-light);
-    border-color: var(--neon-color-light);
+  .neon-button-orange:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
   }
 
-  body:not(.dark) .neon-button-green:hover,
-  body:not(.dark) .neon-button-red:hover,
-  body:not(.dark) .neon-button-orange:hover {
-    background: var(--neon-color-light);
-    box-shadow: 0 0 15px var(--neon-color-light), 0 0 30px var(--neon-color-light), 0 0 50px var(--neon-color-light);
+  .neon-button-orange:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
   }
 
-  /* Variant border animations */
-  .neon-button-green span:nth-child(1),
-  .neon-button-red span:nth-child(1),
+  .neon-button-orange span {
+    position: absolute;
+    display: block;
+    z-index: -1;
+  }
+
+  /* Orange border animations */
   .neon-button-orange span:nth-child(1) {
-    background: linear-gradient(90deg, transparent, var(--neon-color));
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f59e0b);
+  }
+  .neon-button-orange:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
   }
 
-  .neon-button-green span:nth-child(2),
-  .neon-button-red span:nth-child(2),
   .neon-button-orange span:nth-child(2) {
-    background: linear-gradient(180deg, transparent, var(--neon-color));
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f59e0b);
+  }
+  .neon-button-orange:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
   }
 
-  .neon-button-green span:nth-child(3),
-  .neon-button-red span:nth-child(3),
   .neon-button-orange span:nth-child(3) {
-    background: linear-gradient(270deg, transparent, var(--neon-color));
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f59e0b);
+  }
+  .neon-button-orange:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
   }
 
-  .neon-button-green span:nth-child(4),
-  .neon-button-red span:nth-child(4),
   .neon-button-orange span:nth-child(4) {
-    background: linear-gradient(360deg, transparent, var(--neon-color));
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #f59e0b);
+  }
+  .neon-button-orange:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+  }
+
+  /* Light mode variants */
+  body:not(.dark) .neon-button-green {
+    color: #059669;
+    border-color: #059669;
+  }
+  body:not(.dark) .neon-button-green:hover {
+    color: #ffffff;
+    background: #059669;
+    box-shadow: 0 0 15px #059669, 0 0 30px #059669, 0 0 50px #059669;
+  }
+  body:not(.dark) .neon-button-green span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #059669);
+  }
+  body:not(.dark) .neon-button-green span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, #059669);
+  }
+  body:not(.dark) .neon-button-green span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, #059669);
+  }
+  body:not(.dark) .neon-button-green span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, #059669);
+  }
+
+  body:not(.dark) .neon-button-red {
+    color: #dc2626;
+    border-color: #dc2626;
+  }
+  body:not(.dark) .neon-button-red:hover {
+    color: #ffffff;
+    background: #dc2626;
+    box-shadow: 0 0 15px #dc2626, 0 0 30px #dc2626, 0 0 50px #dc2626;
+  }
+  body:not(.dark) .neon-button-red span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #dc2626);
+  }
+  body:not(.dark) .neon-button-red span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, #dc2626);
+  }
+  body:not(.dark) .neon-button-red span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, #dc2626);
+  }
+  body:not(.dark) .neon-button-red span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, #dc2626);
+  }
+
+  body:not(.dark) .neon-button-orange {
+    color: #ea580c;
+    border-color: #ea580c;
+  }
+  body:not(.dark) .neon-button-orange:hover {
+    color: #ffffff;
+    background: #ea580c;
+    box-shadow: 0 0 15px #ea580c, 0 0 30px #ea580c, 0 0 50px #ea580c;
+  }
+  body:not(.dark) .neon-button-orange span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, #ea580c);
+  }
+  body:not(.dark) .neon-button-orange span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, #ea580c);
+  }
+  body:not(.dark) .neon-button-orange span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, #ea580c);
+  }
+  body:not(.dark) .neon-button-orange span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, #ea580c);
   }
 
   /* KPI Card Neon Border Effects */
